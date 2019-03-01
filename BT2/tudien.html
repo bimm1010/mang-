@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<script>
+    let search = prompt("nhập từ cần tìm: ");
+    let E = ["love", "you", "ok", "" ];
+    let V = [" yêu", "Bạn", "Đồng ý", ];
+///////////////////////////////////////////////////
+
+    for(i = 0; i < E.length; i++){
+        if (E[i] == search){
+            alert(V[i]);
+            break;
+    }
+
+
+    }
+    for (i = 1; i < E.length; i++){
+        if (E[i] == search){
+            alert(V[i]);
+            break;
+        }
+
+
+    }
+    for ( i = 2; i < E.length; i++){
+        if (E[i] == search){
+            alert(V[i]);
+            break;
+        }
+    }
+    for ( i = 3; i < E.length; i++){
+        if (E[i] !== V[i] ){
+            document.write("word wrong");
+            break;
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
