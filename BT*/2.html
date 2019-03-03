@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number max</title>
+
+</head>
+<body>
+<script>
+    let x= [1, 40, 3, 4, 15, 16, 17, 18, 19, 2];
+    let max = x[0];
+    let index = 0;
+    for ( i = 0 ; i < x.length; i++){
+        if (x[i] > max) {
+            max = x[i];
+            index = i++;
+            document.write("giá trị lớn nhất:" + max + "<br>" );
+            document.write("vị trí của số lớn nhất:" + index +  "<br>");
+        }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
