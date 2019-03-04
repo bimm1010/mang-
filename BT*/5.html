@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số nguyên âm</title>
+</head>
+<body>
+nhập chữ : <input type="text" id="input" oninput=""/>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();">
+<div id="result"></div>
+<input type="button" id="btnCount" value="count" onclick="count_array();">
+</body>
+<script>
+    let x = 0;
+    let array = Array();
+    ///////////////////////////////////
+    function add_element_to_array(){
+        array[x] = document.getElementById("input").value;
+        alert("Elenment:" + array[x] + "Added at index" + x);
+        x++;
+        document.getElementById("input").value = "";
+    }
+    //////////////////////////////////
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++){
+            e += "Element" + i + "=" + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+    /////////////////////////
+    function count_array(){
+        let dem = 0;
+        let word = "";
+        for(i = 0; i < array.length; i++){
+            if((word = 'u') || (word = 'e') || (word = 'o') || (word = 'a') || (word = 'i')){
+                dem++;
+                word++;
+                document.write("chuỗi ký tự nguyên âm:" + dem + "<br/>");
+            }
+        }
+
+    }
+</script>
+</html>
