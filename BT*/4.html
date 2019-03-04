@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đảo ngược số</title>
+</head>
+<body>
+nhập số : <input type="text" id="input" oninput=""/>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();">
+<div id="result"></div>
+<input type="button" id="bntRevert" value="Revert" onclick="Revert_array();">
+<script>
+    let x = 0;
+    let array = Array();
+    function add_element_to_array(){
+        array[x] = document.getElementById("input").value;
+        alert("Element: " + array[x] + "Added at index" + x);
+        x++;
+        document.getElementById("input").value = "";
+    }
+    function display_array(){
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++){
+            e += "elenemt" + i + "=" + array[i] + "<br/>";
+        }
+        document.getElementById(("result")).innerHTML = e;
+    }
+    function Revert_array(){
+        let first = 0;
+        let last = array.length - 1;
+        while (first < last ){
+            let b = array[first];
+            array[first] = array[last];
+            array[last] = b;
+            first++;
+            last--;
+            document.write(array + "<br/>");
+        }
+    }
+
+
+</script>
+</body>
+</html>
