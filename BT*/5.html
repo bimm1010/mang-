@@ -5,7 +5,7 @@
     <title>đếm số nguyên âm</title>
 </head>
 <body>
-nhập chữ : <input type="text" id="input" oninput=""/>
+nhập chữ : <input type="text" id="input" oninput="">
 <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">
 <input type="button" id="btnDisplay" value="Display" onclick="display_array();">
 <div id="result"></div>
@@ -37,10 +37,10 @@ nhập chữ : <input type="text" id="input" oninput=""/>
             if((word = 'u') || (word = 'e') || (word = 'o') || (word = 'a') || (word = 'i')){
                 dem++;
                 word++;
-                document.write("chuỗi ký tự nguyên âm:" + dem + "<br/>");
             }
-        }
+        }document.write("số nguyên âm là:" + dem + "<br/>");
 
     }
+
 </script>
 </html>
